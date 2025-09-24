@@ -4,7 +4,9 @@ import express from "express"
 import connectDB from "./DATABASE/config.js"
 import routes from "./Routes/todolistroute.js"
 import cors from "cors"
+import dotenv from 'dotenv'
 
+dotenv.config()
 const app = express()
 app.use(express.json())
 app.use(cors({origin:"http://localhost:5173"}))

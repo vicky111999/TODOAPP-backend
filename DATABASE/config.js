@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 const connectDB =()=>{
 
-    mongoose.connect("mongodb://127.0.0.1:27017/todo")
+    mongoose.connect(process.env.DB_URI)
         .then(()=>{console.log("DataBase Connected")})
         .catch((error)=>{console.log("ERROR",error)})
 }

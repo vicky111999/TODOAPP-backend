@@ -51,6 +51,6 @@ export const Pending =async(req,res)=>{
       }
       catch(error)
       {
-         return res.json.status(500).json({success:false,message:error.message})
+         return res.status(500).json({success:false,message:error.message})
       }
 }
