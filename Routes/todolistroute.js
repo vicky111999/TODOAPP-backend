@@ -10,4 +10,5 @@ routes.get("/Categories",categories)
 routes.post("/itemDelete",itemDelete)
 routes.get("/",todoallitemviewcontroller)
 routes.get("/pending",Pending)
+routes.get("/alltask")
 export default routes

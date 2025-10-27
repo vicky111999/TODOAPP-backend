@@ -1,10 +1,11 @@
-import todomodel from "../DATABASE/todomodel.js"
+import todomodel from "../DATABASE/todomodel";
 
 
-export const todoallitemviewcontroller = async(req,res) => {
+
+export const alltask = async(req,res) => {
             try
             {
-                const find = await todomodel.find({})
+                const find = await todomodel.find({MentionDate:{$gte:Date.now()}})
                 if(!find) 
                     {
                       return res.json({success:false,message:"No Tasks"})
