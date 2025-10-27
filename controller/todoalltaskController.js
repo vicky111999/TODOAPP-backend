@@ -1,6 +1,4 @@
-import todomodel from "../DATABASE/todomodel";
-
-
+import todomodel from "../DATABASE/todomodel.js"
 
 export const alltask = async(req,res) => {
             try
