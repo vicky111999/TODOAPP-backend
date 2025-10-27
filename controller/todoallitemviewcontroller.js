@@ -4,7 +4,7 @@ import todomodel from "../DATABASE/todomodel.js"
 export const todoallitemviewcontroller = async(req,res) => {
             try
             {
-                const find = await todomodel.find({})
+                const find = await todomodel.find({MentionDate:{$gte:Date.now()}})
                 if(!find) 
                     {
                       return res.json({success:false,message:"No Tasks"})
