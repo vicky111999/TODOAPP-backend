@@ -5,7 +5,7 @@ import todomodel from "../DATABASE/todomodel";
 export const alltask = async(req,res) => {
             try
             {
-                const find = await todomodel.find({MentionDate:{$gte:Date.now()}})
+                const find = await todomodel.find({})
                 if(!find) 
                     {
                       return res.json({success:false,message:"No Tasks"})
