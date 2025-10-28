@@ -1,5 +1,6 @@
-import todomodel from "../DATABASE/todomodel.js"
 
+
+import todomodel from "../DATABASE/todomodel.js";
 
 export const  Deleted = async(req,res)=>{
 

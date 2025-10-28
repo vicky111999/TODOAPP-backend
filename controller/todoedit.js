@@ -1,6 +1,8 @@
-import todomodel from "../DATABASE/todomodel"
+import todomodel from "../DATABASE/todomodel.js"
 
 export const edit = async (req,res)=>{
+
+    
 
     try {
         
