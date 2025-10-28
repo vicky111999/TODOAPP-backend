@@ -3,6 +3,8 @@ import { itemAdd, itemDelete } from "../controller/todoitemcontroller.js"
 import { categories, Pending } from "../controller/todoitemviewscontroller.js"
 import { todoallitemviewcontroller } from "../controller/todoallitemviewcontroller.js"
 import { alltask } from "../controller/todoalltaskController.js"
+import { Deleted } from "../controller/todotaskeditdelController.js"
+import { edit } from "../controller/todoedit.js"
 
 const routes = express.Router()
 
@@ -12,4 +14,6 @@ routes.post("/itemDelete",itemDelete)
 routes.get("/",todoallitemviewcontroller)
 routes.get("/pending",Pending)
 routes.get("/alltask",alltask)
+routes.delete("/delete/:id",Deleted)
+routes.put("/update/:id",edit)
 export default routes
