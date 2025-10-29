@@ -21,27 +21,3 @@ export const itemAdd = async (req,res)=>{
         }
 }
 
-export const itemDelete = async(req,res)=>{
-
-    const {title} = req.body
-
-    if(!title) return res.json({success:false , message:"Missing details"})
-
-       try{
-            const find = await todomodel.findOne({itemcategory:title})
-
-            if(!find) 
-            {
-                return res.json({success:false , message:"Invalid Title"})
-
-            }
-
-            const Delete = await todomodel.deleteOne({itemcategory:title})
-
-            return res.json({success: true, message: Delete})
-       }
-       catch(error)
-       {
-        return res.json({success: false, message: error.message})
-       } 
-}

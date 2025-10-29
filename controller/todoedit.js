@@ -7,10 +7,14 @@ export const edit = async (req,res)=>{
     try {
         
         const find = await todomodel.findById(req.params.id)
+                    const {title,details,date} = req.body
 
         if(find)
         {
-            const edited = await todomodel.findByIdAndUpdate(req.params.id,req.body)
+            const edited = await todomodel.findByIdAndUpdate(req.params.id,
+           {itemcategory:title,
+            itemdetails:details,
+            MentionDate:date})
             return res.status(200).json({success:true, message:"Successfully updated"})
         }
 
