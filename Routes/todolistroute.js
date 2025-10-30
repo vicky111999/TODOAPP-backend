@@ -6,6 +6,7 @@ import { alltask } from "../controller/todoalltaskController.js"
 import { Deleted } from "../controller/todotaskeditdelController.js"
 import { edit } from "../controller/todoedit.js"
 import { completion } from "../controller/completed.js"
+import { completedtask } from "../controller/completedtasks.js"
 
 const routes = express.Router()
 
@@ -17,4 +18,5 @@ routes.get("/alltask",alltask)
 routes.delete("/delete/:id",Deleted)
 routes.put("/update/:id",edit)
 routes.patch("/status/:id",completion)
+routes.get("/completed",completedtask)
 export default routes
