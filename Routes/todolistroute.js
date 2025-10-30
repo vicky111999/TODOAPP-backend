@@ -5,6 +5,7 @@ import { todoallitemviewcontroller } from "../controller/todoallitemviewcontroll
 import { alltask } from "../controller/todoalltaskController.js"
 import { Deleted } from "../controller/todotaskeditdelController.js"
 import { edit } from "../controller/todoedit.js"
+import { completion } from "../controller/completed.js"
 
 const routes = express.Router()
 
@@ -15,4 +16,5 @@ routes.get("/pending",Pending)
 routes.get("/alltask",alltask)
 routes.delete("/delete/:id",Deleted)
 routes.put("/update/:id",edit)
+routes.patch("/status/:id",completion)
 export default routes
