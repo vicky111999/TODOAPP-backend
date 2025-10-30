@@ -9,7 +9,7 @@ try{
 
     if (!find) return res.status(404).json({success:false,message:"NOt found id"})
 
-    await todomodel.findByIdAndUpdate(id,completed)  
+    await todomodel.findByIdAndUpdate(id,{completed:completed})  
 
     return res.status(200).json({success:true,message:" Task Completed"})
 }
