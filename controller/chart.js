@@ -6,8 +6,8 @@ export const charting = async(req,res)=>{
     try{
 
             const find = await todomodel.find()
-            const completetask = await find.filter(t=>t.completed).length
-            const pendingtask  = await find.filter(t=>!t.completed).length
+            const completetask = find.filter(t=>t.completed).length
+            const pendingtask  = find.filter(t=>!t.completed).length
 
             return res.status(200).json({success:true,data:{completetask,pendingtask}})
     }
