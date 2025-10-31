@@ -8,6 +8,7 @@ import { edit } from "../controller/todoedit.js"
 import { completion } from "../controller/completed.js"
 import { completedtask } from "../controller/completedtasks.js"
 import { pendingtask } from "../controller/pendingtasks.js"
+import { charting } from "../controller/chart.js"
 
 const routes = express.Router()
 
@@ -21,4 +22,5 @@ routes.put("/update/:id",edit)
 routes.patch("/status/:id",completion)
 routes.get("/completed",completedtask)
 routes.get("/pending",pendingtask)
+routes.get("/chart",charting)
 export default routes
