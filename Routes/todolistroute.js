@@ -21,6 +21,6 @@ routes.delete("/delete/:id",Deleted)
 routes.put("/update/:id",edit)
 routes.patch("/status/:id",completion)
 routes.get("/completed",completedtask)
-routes.get("/pending",pendingtask)
+routes.get("/pendings",pendingtask)
 routes.get("/chart",charting)
 export default routes
